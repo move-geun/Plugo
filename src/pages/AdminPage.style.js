@@ -92,4 +92,22 @@ const ItemCard = styled.div`
   }
 `;
 
-export { AdminContainer, ItemCard };
+const AddItem = styled.div`
+  display: flex;
+  width: 40%;
+  height: 30px;
+  background-color: whitesmoke;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+  :hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+`;
+
+export { AdminContainer, ItemCard, AddItem };

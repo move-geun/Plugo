@@ -102,13 +102,6 @@
   ],
   "cart": [
     {
-      "id": 1,
-      "title": "Raya Scarf",
-      "stock": "True",
-      "img": "https://d2kchovjbwl1tk.cloudfront.net/vendor/19/product/Black_1673337663685.jpg",
-      "price": "189,000"
-    },
-    {
       "id": 6,
       "title": "Aleza Silk Eyelesh Shawl - Black",
       "stock": "False",

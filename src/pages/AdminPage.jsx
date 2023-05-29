@@ -3,7 +3,7 @@ import http from "../api/http";
 import { ItemID } from "../recoil/atoms";
 import { useRecoilState } from "recoil";
 import { Link, useNavigate } from "react-router-dom";
-import { AdminContainer, ItemCard } from "./AdminPage.style";
+import { AdminContainer, ItemCard, AddItem } from "./AdminPage.style";
 
 const AdminPage = () => {
   const [items, setItems] = useState(null);
@@ -90,7 +90,7 @@ const AdminPage = () => {
   return (
     <div>
       <Link to={"/addproduct"}>
-        <button>상품 등록하기</button>
+        <AddItem className="addItem">상품 등록하기</AddItem>
       </Link>
       <AdminContainer>
         <div className="leftContainer">
@@ -189,7 +189,7 @@ const AdminPage = () => {
           </form>
           <div className="btnCase">
             <div className="green" onClick={itemUpdate}>
-              저장
+              상품 수정
             </div>
             <div className="red" onClick={itemlDelete}>
               아이템 삭제
