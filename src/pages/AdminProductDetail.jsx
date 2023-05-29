@@ -1,8 +1,10 @@
 import { useRecoilValue } from "recoil";
 import { itemDetailSelector } from "../recoil/selector";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const AdminProductDetail = () => {
+  const navigate = useNavigate();
   const NowItem = useRecoilValue(itemDetailSelector);
   const [form, setForm] = useState({
     id: NowItem.id,
@@ -21,7 +23,18 @@ const AdminProductDetail = () => {
     setForm({ ...form, [name]: value });
   };
 
-  const update = () => {};
+  const itemUpdate = () => {
+    fetch(`http://localhost:4000/items/${NowItem.id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    })
+      .then((res) => res.json())
+      .catch((err) => {
+        console.log(err);
+      });
+    navigate("/admin");
+  };
 
   return (
     <div>
@@ -100,7 +113,7 @@ const AdminProductDetail = () => {
             />
           </label>
         </div>
-        <button onClick={update}>저장</button>
+        <button onClick={itemUpdate}>저장</button>
       </form>
     </div>
   );
