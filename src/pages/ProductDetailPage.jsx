@@ -3,6 +3,15 @@ import { itemDetailSelector } from "../recoil/selector";
 import { Link, useNavigate } from "react-router-dom";
 import http from "../api/http";
 import { useState, useEffect } from "react";
+import {
+  DetailContainer,
+  ImageContainer,
+  ItemContainer,
+  PurchaseBox,
+  DetailBox,
+  AdressBox,
+  ContactBox,
+} from "./ProductDetailPage.style";
 
 const ProductDetailPage = () => {
   const nowItem = useRecoilValue(itemDetailSelector);
@@ -53,19 +62,59 @@ const ProductDetailPage = () => {
   }, []);
 
   return (
-    <div>
-      <div>{nowItem.title}</div>
-      <img src={nowItem.img} alt="이미지가 없습니다" />
-      <Link to={"/cart"}>
+    <DetailContainer>
+      <ImageContainer>
+        <img src={nowItem.img} alt="이미지가 없습니다" />
+      </ImageContainer>
+      <ItemContainer>
+        <div className="titleCase">
+          {nowItem.stock === "True" ? (
+            <div className="stock">재고있음</div>
+          ) : (
+            <div className="stock">품절</div>
+          )}
+          <div>{nowItem.title}</div>
+          <div>{nowItem.price}</div>
+        </div>
+
         <button
           onClick={(e) => {
             addCart();
           }}
         >
-          장바구니에 추가
+          <Link to={"/cart"}>장바구니에 추가 </Link>
         </button>
-      </Link>
-    </div>
+
+        <PurchaseBox>
+          <div>color:</div>
+          <div className="flexbox">
+            <div className="purchase">
+              <img src={nowItem.img} alt="이미지가 없습니다" />
+              <div>
+                <div>Black</div>
+                <div>Rp {nowItem.price}</div>
+              </div>
+            </div>
+            <div
+              className="purchaseBtn"
+              onClick={() => alert("기능 구현중입니다")}
+            >
+              구입하기
+            </div>
+          </div>
+        </PurchaseBox>
+        <DetailBox>
+          <div>{nowItem.detail}</div>
+          <div>{nowItem.deatil2}</div>
+          <div>{nowItem.size}</div>
+          <div>{nowItem.pound}</div>
+        </DetailBox>
+        <AdressBox>주소 찾기</AdressBox>
+        <ContactBox onClick={() => alert("기능 구현중입니다")}>
+          문의하기
+        </ContactBox>
+      </ItemContainer>
+    </DetailContainer>
   );
 };
 
