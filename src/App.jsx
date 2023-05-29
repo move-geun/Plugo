@@ -3,6 +3,7 @@ import MainPage from "./pages/MainPage";
 import AdminPage from "./pages/AdminPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import CartPage from "./pages/CartPage";
+import NotFoundPage from "./pages/NotFoundPage";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import { Suspense } from "react";
 
@@ -20,7 +21,7 @@ function App() {
           <Route path="/admin" element={<AdminPage />} />
 
           {/* notFound */}
-          <Route path="/*" element={<MainPage />} />
+          <Route path="/*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
