@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import http from "../api/http";
+import { AddContainer } from "./ProductAddPage.style";
 
 const ProductAddPage = () => {
   const navigate = useNavigate();
@@ -47,8 +48,8 @@ const ProductAddPage = () => {
     createNewID();
   }, []);
   return (
-    <div>
-      <form onSubmit="">
+    <AddContainer>
+      <form onSubmit="return false">
         <div>
           <label htmlFor="title">
             상품명
@@ -131,9 +132,11 @@ const ProductAddPage = () => {
             />
           </label>
         </div>
-        <button onClick={itemUpdate}>등록하기</button>
       </form>
-    </div>
+      <div className="btnCase green" onClick={itemUpdate}>
+        등록하기
+      </div>
+    </AddContainer>
   );
 };
 
