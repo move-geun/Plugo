@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Plugo Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 포팅 메뉴얼
 
-## Available Scripts
++ `npm i`를 통해 실행에 필요한 라이브러리를 설치합니다
++ `json-server ./data.json --port 4000` 명령어를 입력하여 json-server를 실행시킵니다
++ `npm start`
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 개발 전 기능정의서
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+|        구분         |               요구사항                |                        요구사항 명세                         | 우선순위 |
+| :-----------------: | :-----------------------------------: | :----------------------------------------------------------: | :------: |
+|      Main Page      |    등록되어 있는 상품 리스트 나열     | 제품 카테고리 및 검색창<br />재고 유무<br />아이템 대표 썸네일 사진<br />아이템 이름 및 가격<br />장바구니에 추가된 제품 있을 시 화면 아래에 표시(선택된 제품 갯수와 가격 표)<br />반응형페이지 |          |
+| Product Detail Page | 상품명, 가격, 장바구니 추가, 추천상품 | 제품 디테일 사진(마우스 호버시 사진 확대)<br />제품 정보<br />장바구니 담기 버튼<br />배달 지역 선택 <br />문의 하기 |    1     |
+|      Cart Page      |            장바구니 페이지            | 주문수량 조정<br />아이템 삭제<br />선택된 아이템 가격 요약<br />아이템 모두 선택 버튼<br /> |    1     |
+|     Admin Page      |           상품 CRUD 페이지            | admin 계정 로그인<br />현재 등록된 상품과 재고 보여주기<br />상품 등록하기 (사진, 아이템명, 디테일, 재고수량)<br />상품 삭제<br />상품 수정 |    1     |
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### 구현 내용
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
++ Main Page
+  * [ ] 제품 카테고리 및 검색창
+  * [ ] 재고 유무
+  * [x] 아이템 대표 썸네일 사진
+  * [x] 아이템 이름 및 가격
+  * [ ] 장바구니에 추가된 제품 있을 시 화면 아래에 표시(선택된 제품 갯수와 가격 표)
+  * [ ] 반응형 페이지
++ Product Detail
+  * [x] 제품 디테일 사진(마우스 호버시 확대)
+  * [x] 제품 정보
+  * [x] 장바구니 담기 버튼
+  * [ ] 배달 지역 선택
+  * [ ] 문의하기
++ Cart Page
+  * [ ] 주문 수량 조정
+  * [x] 아이템 삭제
+  * [ ] 선택된 아이템 가격 합
+  * [ ] 아이템 모두 선택 
++ Admin Page
+  * [ ] Admin 계정 로그인
+  * [x] 현재 등록된 상품과 재고 
+  * [x] 상품 정보 수정
+  * [x] 상품 삭제
+  * [x] 상품 등록하기
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### 후기
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
++ 짧은 시간 내에 커밋과 기능 개발을 해보니 재미있었습니다
++ 곳곳의 에러를 보니 시간이 조금만 더 있었으면 하는 생각이 들었습니다
++ 감사합니다
