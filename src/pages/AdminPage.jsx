@@ -42,7 +42,9 @@ const AdminPage = () => {
             ))
           : null}
       </div>
-      <button>상품 등록하기</button>
+      <Link to={"/addproduct"}>
+        <button>상품 등록하기</button>
+      </Link>
     </div>
   );
 };
