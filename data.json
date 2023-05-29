@@ -98,17 +98,6 @@
       "detail2": "Harga Rp 99.000,- (bestprice)",
       "size": "Size 115cm x 115cm",
       "pound": "Berat: 105g"
-    },
-    {
-      "id": 10,
-      "title": "가짜",
-      "stock": "있",
-      "price": "15",
-      "img": "",
-      "detail": "",
-      "detail2": "",
-      "size": "",
-      "pound": ""
     }
   ],
   "cart": [

@@ -36,6 +36,15 @@ const AdminProductDetail = () => {
     navigate("/admin");
   };
 
+  const itemlDelete = () => {
+    fetch(`http://localhost:4000/items/${NowItem.id}`, {
+      method: "DELETE",
+    }).then(() => {
+      console.log("delete item");
+    });
+    navigate("/admin");
+  };
+
   return (
     <div>
       <form onSubmit="">
@@ -115,6 +124,8 @@ const AdminProductDetail = () => {
         </div>
         <button onClick={itemUpdate}>저장</button>
       </form>
+
+      <button onClick={itemlDelete}>아이템 삭제</button>
     </div>
   );
 };
