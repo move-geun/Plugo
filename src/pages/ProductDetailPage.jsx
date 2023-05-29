@@ -1,32 +1,12 @@
-import { ItemID } from "../recoil/atoms";
 import { useRecoilValue } from "recoil";
-import { useState, useEffect } from "react";
-import http from "../api/http";
+import { itemDetailSelector } from "../recoil/selector";
 
 const ProductDetailPage = () => {
-  const nowItem = useRecoilValue(ItemID);
-  const [nowDetail, setNowDetail] = useState(null);
-  const item_detail = () => {
-    http
-      .get(`/items/${nowItem}`)
-      .then((res) => {
-        setNowDetail(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-  useEffect(() => {
-    item_detail();
-  }, []);
-
+  const nowItem = useRecoilValue(itemDetailSelector);
   return (
     <div>
-      <div>
-        {nowDetail.id}
-        {nowDetail.title}
-        {nowDetail.detail}
-      </div>
+      <div>{nowItem.title}</div>
+      <img src={nowItem.img} alt="이미지가 없습니다" />
     </div>
   );
 };
