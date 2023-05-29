@@ -3,8 +3,8 @@ import { recoilPersist } from "recoil-persist";
 
 const { persistAtom } = recoilPersist();
 
-export const Temp = atom({
-  key: "Temp",
-  default: "Temp",
+export const ItemID = atom({
+  key: "ItemID",
+  default: 0,
   effects_UNSTABLE: [persistAtom],
 });
