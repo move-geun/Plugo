@@ -6,6 +6,7 @@ import AdminProductDetail from "./pages/AdminProductDetail";
 import ProductAddPage from "./pages/ProductAddPage";
 import CartPage from "./pages/CartPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import NavBar from "./components/navBar";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import { Suspense } from "react";
 
@@ -13,6 +14,7 @@ function App() {
   return (
     <BrowserRouter>
       <GlobalStyle />
+      <NavBar />
       <Suspense fallback={<div>Loading ... </div>}>
         <Routes>
           <Route path="/" element={<MainPage />} />
