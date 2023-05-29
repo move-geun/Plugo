@@ -4,7 +4,7 @@
       "id": 1,
       "title": "Raya Scarf",
       "stock": "True",
-      "price": "339,000",
+      "price": "189,000",
       "img": "https://d2kchovjbwl1tk.cloudfront.net/vendor/19/product/Black_1673337663685.jpg",
       "detail": "Total 7 pilihan warna",
       "detail2": "Harga Rp 199.000,- (bestprice)",
@@ -121,13 +121,6 @@
       "stock": "False",
       "img": "https://d2kchovjbwl1tk.cloudfront.net/vendor/19/product/Denim_1681196059087.jpg",
       "price": "349,000"
-    },
-    {
-      "id": 9,
-      "title": "Luna Cardigan - Dusty Pink",
-      "stock": "True",
-      "img": "https://d2kchovjbwl1tk.cloudfront.net/vendor/19/product/Dustypink_1679275096630.jpeg",
-      "price": "229,000"
     }
   ]
 }

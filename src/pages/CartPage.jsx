@@ -13,6 +13,14 @@ const CartPage = () => {
         console.log(err);
       });
   };
+  const itemlDelete = (id) => {
+    fetch(`http://localhost:4000/cart/${id}`, {
+      method: "DELETE",
+    }).then(() => {
+      console.log("delete item");
+    });
+    window.location.reload();
+  };
 
   useEffect(() => {
     cart_list();
@@ -24,7 +32,14 @@ const CartPage = () => {
       {cartItems
         ? cartItems.map((cart, idx) => (
             <div key={idx}>
-              <div>{cart.id}</div>
+              <div>
+                <div>{cart.id}</div>
+                <div>{cart.title}</div>
+                <img src={cart.img} alt="" />
+              </div>
+              <button onClick={() => itemlDelete(cart.id)}>
+                장바구니에서 삭제
+              </button>
             </div>
           ))
         : null}
