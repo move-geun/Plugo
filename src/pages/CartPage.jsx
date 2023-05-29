@@ -41,7 +41,7 @@ const CartPage = () => {
             <input type="checkbox" name="allCancle" />
             <label htmlFor="allCancle">모두 해제</label>
           </div>
-          {cartItems ? (
+          {cartLen ? (
             cartItems.map((cart, idx) => (
               <ItemCard key={idx}>
                 <div className="top">
@@ -71,13 +71,29 @@ const CartPage = () => {
               </ItemCard>
             ))
           ) : (
-            <div>
+            <div className="empty">
               장바구니가 비었습니다
-              <div>쇼핑하러 가기</div>
+              <div className="goShop">쇼핑하러 가기</div>
             </div>
           )}
         </div>
-        <div className="rightContainer">오른쪽</div>
+        <div className="rightContainer">
+          <div className="flexbox">지출 요약</div>
+          <div className="flexbox">
+            <div>상품 정상가</div>
+            <div>total 원</div>
+          </div>
+          <div className="flexbox">
+            <div>상품 정상가</div>
+            <div>total 원</div>
+          </div>
+          <div
+            className="flexbox nowBtn"
+            onClick={() => alert("기능 구현중입니다.")}
+          >
+            지금 주문하기
+          </div>
+        </div>
       </ItemContainer>
     </CartContainer>
   );

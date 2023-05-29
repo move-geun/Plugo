@@ -102,25 +102,18 @@
   ],
   "cart": [
     {
-      "id": 3,
-      "title": "Secret Voal Eyelesh - Forest",
+      "id": 1,
+      "title": "Raya Scarf",
       "stock": "True",
-      "img": "https://d2kchovjbwl1tk.cloudfront.net/vendor/19/product/Forest_1680329339441.jpg",
-      "price": "99,000"
+      "img": "https://d2kchovjbwl1tk.cloudfront.net/vendor/19/product/Black_1673337663685.jpg",
+      "price": "189,000"
     },
     {
-      "id": 8,
-      "title": "Cinderella Dress Basic - Denim",
+      "id": 6,
+      "title": "Aleza Silk Eyelesh Shawl - Black",
       "stock": "False",
-      "img": "https://d2kchovjbwl1tk.cloudfront.net/vendor/19/product/Denim_1681196059087.jpg",
-      "price": "349,000"
-    },
-    {
-      "id": 5,
-      "title": "Soka Span Skirt - Mocca",
-      "stock": "False",
-      "img": "https://d2kchovjbwl1tk.cloudfront.net/vendor/19/product/Kocca_1681200475679.jpg",
-      "price": "199,000"
+      "img": "https://d2kchovjbwl1tk.cloudfront.net/vendor/19/product/Black_1680335550679.jpg",
+      "price": "129,000"
     }
   ]
 }

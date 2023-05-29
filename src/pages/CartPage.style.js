@@ -28,6 +28,25 @@ const ItemContainer = styled.div`
     flex-direction: column;
     justify-content: flex-end;
 
+    .empty {
+      font-size: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 120px;
+
+      .goShop {
+        margin-top: 60px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 20px 30px;
+        border-radius: 20px;
+      }
+      .goShop:hover {
+        background-color: rgba(88, 85, 85, 0.1);
+      }
+    }
+
     .checkbox {
       font-size: 17px;
       margin-top: 20px;
@@ -51,6 +70,37 @@ const ItemContainer = styled.div`
 
   .rightContainer {
     width: 330px;
+    height: 200px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #4d4022;
+
+    .flexbox {
+      display: flex;
+      flex-direction: row;
+      width: 300px;
+      height: 25px;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+    .nowBtn {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0px;
+      border-radius: 10px;
+      background-color: #7d725a;
+      color: white;
+    }
+    .nowBtn:hover {
+      background-color: black;
+    }
   }
 `;
 
