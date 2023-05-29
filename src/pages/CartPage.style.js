@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-const MainContainer = styled.div`
+const CartContainer = styled.div`
   width: 90%;
   margin: 0 auto;
 `;
 
-export { MainContainer };
+export { CartContainer };
